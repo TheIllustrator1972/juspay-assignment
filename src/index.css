@@ -19,6 +19,8 @@
     --section-title: #1c1c1c;
     --notification-icon-background: #e3f5ff;
     --notification-icon-fill: #1c1c1c;
+    --vertical-divider: #1c1c1c1a;
+    --time-text: #1c1c1c66;
   }
 
   .dark {
@@ -30,6 +32,8 @@
     --section-title: #ffffff;
     --notification-icon-background: #e5ecf6;
     --notification-icon-fill: #1c1c1c;
+    --vertical-divider: #ffffff1a;
+    --time-text: #ffffff66;
   }
 
   .sidebar-icon,
