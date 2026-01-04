@@ -1,5 +1,6 @@
 import { useAppContext } from "../contexts/AppContext";
 import { commonStyles } from "../commonStyles";
+import Profile from "./Left/Profile";
 
 function LeftSidebar() {
   const { leftCollapsed } = useAppContext();
@@ -11,8 +12,16 @@ function LeftSidebar() {
         ...(leftCollapsed ? commonStyles.leftSidebarCollapsed : {}),
       }}
     >
-      <div style={commonStyles.sidebarContent}>
-        <h3>Left Sidebar</h3>
+      <div
+        style={{
+          ...commonStyles.sidebarContent,
+          display: "flex",
+          flexDirection: "column",
+          padding: "24px",
+          gap: "36px",
+        }}
+      >
+        <Profile />
         <p>Left sidebar content</p>
       </div>
     </aside>
@@ -20,4 +29,3 @@ function LeftSidebar() {
 }
 
 export default LeftSidebar;
-
