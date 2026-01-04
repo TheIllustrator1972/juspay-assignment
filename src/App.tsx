@@ -1,4 +1,3 @@
-import { ChartPieSliceIcon } from "@phosphor-icons/react";
 import { useTheme } from "./hooks/useTheme";
 
 const styles = {
@@ -18,8 +17,6 @@ const styles = {
 };
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
-
   return <div style={styles.container}></div>;
 }
 
