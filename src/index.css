@@ -24,6 +24,11 @@
     --dark-highlight: #1c1c1c66;
     --light-highlight: #d2d2d2;
     --dot-highlight: #d2d2d2;
+    --dropdown-section-title: #1c1c1c;
+    --dropdown-item-text: #1c1c1c;
+    --dropdown-item-bg-active: rgba(0, 0, 0, 0.08);
+    --dropdown-item-border-active: #1c1c1c;
+    --dropdown-arrow: #1c1c1c;
   }
 
   .dark {
@@ -40,6 +45,11 @@
     --dark-highlight: #ffffff66;
     --light-highlight: #494949;
     --dot-highlight: #494949;
+    --dropdown-section-title: #ffffff;
+    --dropdown-item-text: #ffffff;
+    --dropdown-item-bg-active: #353535;
+    --dropdown-item-border-active: #c6c7f4;
+    --dropdown-arrow: #ffffff;
   }
 
   .sidebar-icon,
@@ -58,5 +68,13 @@
 
   .dark .header-icon-button:hover {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  button:active {
+    outline: none;
+  }
+
+  button:focus {
+    outline: none;
   }
 }
