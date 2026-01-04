@@ -21,6 +21,9 @@
     --notification-icon-fill: #1c1c1c;
     --vertical-divider: #1c1c1c1a;
     --time-text: #1c1c1c66;
+    --dark-highlight: #1c1c1c66;
+    --light-highlight: #d2d2d2;
+    --dot-highlight: #d2d2d2;
   }
 
   .dark {
@@ -34,6 +37,9 @@
     --notification-icon-fill: #1c1c1c;
     --vertical-divider: #ffffff1a;
     --time-text: #ffffff66;
+    --dark-highlight: #ffffff66;
+    --light-highlight: #494949;
+    --dot-highlight: #494949;
   }
 
   .sidebar-icon,
