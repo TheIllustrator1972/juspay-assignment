@@ -29,7 +29,13 @@ export const commonStyles = {
     overflow: "hidden",
   },
   sidebarContent: {
-    padding: "16px",
     height: "100%",
+  },
+  sectionTitle: {
+    fontWeight: 600,
+    fontSize: "16px",
+    "line-height": "20px",
+    "letter-spacing": "0%",
+    color: "var(--section-title)",
   },
 };

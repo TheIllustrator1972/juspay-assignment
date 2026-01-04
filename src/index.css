@@ -13,17 +13,23 @@
   :root {
     --primary: #ffffff;
     --primary-icon: #1c1c1c;
-    --custom-color: #3b82f6; /* Your light mode color */
-    --sidebar-bg: #f5f5f5;
+    --custom-color: #3b82f6;
+    --sidebar-bg: #ffffff;
     --icon-fill: #1c1c1c;
+    --section-title: #1c1c1c;
+    --notification-icon-background: #e3f5ff;
+    --notification-icon-fill: #1c1c1c;
   }
 
   .dark {
     --primary: #1c1c1c;
     --primary-icon: #ffffff;
-    --custom-color: #60a5fa; /* Your dark mode color */
+    --custom-color: #60a5fa;
     --sidebar-bg: #2a2a2a;
     --icon-fill: #ffffff;
+    --section-title: #ffffff;
+    --notification-icon-background: #e5ecf6;
+    --notification-icon-fill: #1c1c1c;
   }
 
   .sidebar-icon,

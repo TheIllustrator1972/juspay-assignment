@@ -1,5 +1,6 @@
 import { useAppContext } from "../contexts/AppContext";
 import { commonStyles } from "../commonStyles";
+import Notifications from "./Right/Notifications";
 
 function RightSidebar() {
   const { rightCollapsed } = useAppContext();
@@ -11,13 +12,11 @@ function RightSidebar() {
         ...(rightCollapsed ? commonStyles.rightSidebarCollapsed : {}),
       }}
     >
-      <div style={commonStyles.sidebarContent}>
-        <h3>Right Sidebar</h3>
-        <p>Right sidebar content</p>
+      <div style={{ ...commonStyles.sidebarContent, padding: "24px" }}>
+        <Notifications />
       </div>
     </aside>
   );
 }
 
 export default RightSidebar;
-
