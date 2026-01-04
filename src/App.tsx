@@ -1,23 +1,27 @@
-import { useTheme } from "./hooks/useTheme";
+import { AppProvider } from "./contexts/AppContext";
+import LeftSidebar from "./components/LeftSidebar";
+import RightSidebar from "./components/RightSidebar";
+import Header from "./components/Header";
+import { commonStyles } from "./commonStyles";
 
-const styles = {
-  container: {
-    minHeight: "100vh",
-    minWidth: "100vw",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "20px",
-    backgroundColor: "var(--primary)",
-    bacground: "var(--primary)",
-  },
-  h1Text: {
-    color: "var(--custom-color)",
-  },
-};
+function MainContent() {
+  return (
+    <main className="main-content" style={commonStyles.container}>
+      <Header />
+    </main>
+  );
+}
 
 function App() {
-  return <div style={styles.container}></div>;
+  return (
+    <AppProvider>
+      <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
+        <LeftSidebar />
+        <MainContent />
+        <RightSidebar />
+      </div>
+    </AppProvider>
+  );
 }
 
 export default App;

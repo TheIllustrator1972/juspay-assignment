@@ -1,9 +1,5 @@
+import { THEME } from "../constants";
 import { useState, useEffect } from "react";
-
-const THEME = {
-  LIGHT: "light",
-  DARK: "dark",
-} as const;
 
 type ThemeValue = (typeof THEME)[keyof typeof THEME];
 
