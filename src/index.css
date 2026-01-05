@@ -34,6 +34,8 @@
     --chart-bar-lower: #AEC4D8;
     --chart-bar-upper: #D2DFEA;
     --chart-grid-line: #3D3D3D;
+    --chart-line-current: #60A5FA;
+    --chart-line-previous: #A78BFA;
     --section-background: #F7F9FB;
   }
 
@@ -61,6 +63,8 @@
     --chart-bar-lower: #AEC4D8;
     --chart-bar-upper: #6B7680;
     --chart-grid-line: #ECEEF0;
+    --chart-line-current: #60A5FA;
+    --chart-line-previous: #A78BFA;
     --section-background: #282828;
   }
 

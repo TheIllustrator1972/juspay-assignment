@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import { commonStyles, mainContentGridStyles } from "./commonStyles";
 import Trends from "./components/CenterContent/Trends/Trends";
 import Projections from "./components/CenterContent/Projections/Projections";
+import Revenue from "./components/CenterContent/Revenue/Revenue";
 
 function MainContent() {
   return (
@@ -28,20 +29,17 @@ function MainContent() {
               backgroundColor: "var(--section-background)",
             }}
           >
-            <div style={{ display: "flex", flexDirection: "column", width: '100%', height: '100%' }}>
-
-            <span style={{...commonStyles.sectionTitle, padding: '24px 0px 0px 24px'}}>Projections vs Actuals</span>
             <Projections />
-            </div>
           </div>
 
           <div
             style={{
               ...mainContentGridStyles.baseItem,
               ...mainContentGridStyles.threeQuarters,
+              backgroundColor: "var(--section-background)",
             }}
           >
-            75%
+            <Revenue />
           </div>
           <div
             style={{

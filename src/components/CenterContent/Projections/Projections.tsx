@@ -1,6 +1,7 @@
 import Chart from "react-apexcharts";
 import type { ApexOptions } from "apexcharts";
 import { useAppContext } from "../../../contexts/AppContext";
+import { commonStyles } from "../../../commonStyles";
 
 const Projections = () => {
   const { theme } = useAppContext();
@@ -98,6 +99,9 @@ const Projections = () => {
   ];
 
   return (
+    <div style={{ display: "flex", flexDirection: "column", width: '100%', height: '100%' }}>
+
+    <span style={{...commonStyles.sectionTitle, padding: '24px 0px 0px 24px'}}>Projections vs Actuals</span>
     <div style={{ width: "100%", height: "100%", paddingLeft: '8px'}}>
       <Chart
         key={theme}
@@ -106,6 +110,7 @@ const Projections = () => {
         type="bar"
         height="100%"
       />
+    </div>
     </div>
   );
 };
