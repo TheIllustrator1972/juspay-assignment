@@ -30,6 +30,11 @@
     --dropdown-item-border-active: #1c1c1c;
     --dropdown-arrow: #1c1c1c;
     --main-content-border: #e8e8e8;
+    --chart-axis-label: #9FA1A2;
+    --chart-bar-lower: #AEC4D8;
+    --chart-bar-upper: #D2DFEA;
+    --chart-grid-line: #3D3D3D;
+    --section-background: #F7F9FB;
   }
 
   .dark {
@@ -52,6 +57,11 @@
     --dropdown-item-border-active: #c6c7f4;
     --dropdown-arrow: #ffffff;
     --main-content-border: #333333;
+    --chart-axis-label: #7E7E7E;
+    --chart-bar-lower: #AEC4D8;
+    --chart-bar-upper: #6B7680;
+    --chart-grid-line: #ECEEF0;
+    --section-background: #282828;
   }
 
   .sidebar-icon,

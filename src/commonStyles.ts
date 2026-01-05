@@ -37,7 +37,7 @@ export const commonStyles = {
   sectionTitle: {
     fontWeight: 600,
     fontSize: "16px",
-    "line-height": "20px",
+    // "line-height": "20px",
     "letter-spacing": "0%",
     color: "var(--section-title)",
   },
@@ -64,8 +64,7 @@ export const mainContentGridStyles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    border: "1px solid #2980b9",
-    borderRadius: "4px",
+    borderRadius: "16px",
     fontSize: "1.2rem",
     fontWeight: "bold",
   },
