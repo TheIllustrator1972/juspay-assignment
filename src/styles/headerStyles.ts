@@ -6,9 +6,10 @@ export const headerStyles = {
     alignItems: "center",
     padding: "16px 24px",
     backgroundColor: "var(--primary)",
-    borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+    borderBottom: `1px solid var(--main-content-border)`,
     overflow: "hidden",
     boxSizing: "border-box" as const,
+    minHeight: "60px",
   },
   leftSection: {
     display: "flex",
@@ -35,4 +36,3 @@ export const headerStyles = {
   },
   iconButtonClassName: "header-icon-button",
 };
-

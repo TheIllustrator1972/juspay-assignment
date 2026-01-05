@@ -29,6 +29,7 @@
     --dropdown-item-bg-active: rgba(0, 0, 0, 0.08);
     --dropdown-item-border-active: #1c1c1c;
     --dropdown-arrow: #1c1c1c;
+    --main-content-border: #e8e8e8;
   }
 
   .dark {
@@ -50,6 +51,7 @@
     --dropdown-item-bg-active: #353535;
     --dropdown-item-border-active: #c6c7f4;
     --dropdown-arrow: #ffffff;
+    --main-content-border: #333333;
   }
 
   .sidebar-icon,

@@ -1,10 +1,13 @@
 export const commonStyles = {
   container: {
-    minHeight: "100vh",
+    height: "100vh",
+    maxHeight: "100vh",
     flex: 1,
     display: "flex",
     flexDirection: "column" as const,
     backgroundColor: "var(--primary)",
+    borderLeft: `1px solid var(--main-content-border)`,
+    borderRight: `1px solid var(--main-content-border)`,
   },
   leftSidebar: {
     height: "100vh",
@@ -37,5 +40,42 @@ export const commonStyles = {
     "line-height": "20px",
     "letter-spacing": "0%",
     color: "var(--section-title)",
+  },
+  mainContentContainer: {
+    display: "flex",
+    flexDirection: "column",
+    flex: 1,
+    gap: "24px",
+    padding: "24px",
+  } as const,
+};
+
+export const mainContentGridStyles = {
+  container: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateRows: "repeat(3, 30%)",
+    gap: "36px",
+    width: "100%",
+    height: "100%",
+  } as const,
+  baseItem: {
+    color: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    border: "1px solid #2980b9",
+    borderRadius: "4px",
+    fontSize: "1.2rem",
+    fontWeight: "bold",
+  },
+  half: {
+    gridColumn: "span 2",
+  },
+  threeQuarters: {
+    gridColumn: "span 3",
+  },
+  oneQuarter: {
+    gridColumn: "span 1",
   },
 };
