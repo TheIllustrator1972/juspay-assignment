@@ -7,6 +7,7 @@ import Trends from "./components/CenterContent/Trends/Trends";
 import Projections from "./components/CenterContent/Projections/Projections";
 import Revenue from "./components/CenterContent/Revenue/Revenue";
 import RevenueByLocation from "./components/CenterContent/RevenueByLocation/RevenueByLocation";
+import TotalSales from "./components/CenterContent/TotalSales/TotalSales";
 
 function MainContent() {
   return (
@@ -64,9 +65,10 @@ function MainContent() {
             style={{
               ...mainContentGridStyles.baseItem,
               ...mainContentGridStyles.oneQuarter,
+              backgroundColor: "var(--section-background)",
             }}
           >
-            25%
+            <TotalSales />
           </div>
         </div>
       </div>

@@ -42,6 +42,10 @@
     --progress-bar-color: #60A5FA;
     --map-background: #E8E8E8;
     --map-country-fill: #D2DFEA;
+    --sales-direct: #A78BFA;
+    --sales-affiliate: #4ADE80;
+    --sales-sponsored: #60A5FA;
+    --sales-email: #C084FC;
   }
 
   .dark {
@@ -76,6 +80,10 @@
     --progress-bar-color: #60A5FA;
     --map-background: #3D3D3D;
     --map-country-fill: #6B7680;
+    --sales-direct: #A78BFA;
+    --sales-affiliate: #4ADE80;
+    --sales-sponsored: #60A5FA;
+    --sales-email: #C084FC;
   }
 
   .sidebar-icon,
