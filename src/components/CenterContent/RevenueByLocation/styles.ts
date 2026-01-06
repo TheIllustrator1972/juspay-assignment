@@ -25,7 +25,7 @@ export const revenueByLocationStyles = {
     default: { outline: "none" },
     hover: { outline: "none" },
     pressed: { outline: "none" },
-  },
+  } as const,
   pinGlow: {
     filter: "blur(4px)",
   },
@@ -73,4 +73,3 @@ export const revenueByLocationStyles = {
     transition: "width 0.3s ease",
   }),
 };
-

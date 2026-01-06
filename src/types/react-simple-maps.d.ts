@@ -11,11 +11,17 @@ declare module 'react-simple-maps' {
     children: (props: { geographies: Geography[] }) => ReactNode;
   }
 
+  export interface GeographyStyle {
+    default?: React.CSSProperties;
+    hover?: React.CSSProperties;
+    pressed?: React.CSSProperties;
+  }
+
   export interface GeographyProps {
     geography: Geography;
     fill?: string;
     stroke?: string;
-    style?: React.CSSProperties;
+    style?: React.CSSProperties | GeographyStyle;
     [key: string]: any;
   }
 
