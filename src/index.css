@@ -46,6 +46,14 @@
     --sales-affiliate: #4ADE80;
     --sales-sponsored: #60A5FA;
     --sales-email: #C084FC;
+    --order-status-in-progress: #60A5FA;
+    --order-status-complete: #4ADE80;
+    --order-status-pending: #A78BFA;
+    --order-status-approved: #FBBF24;
+    --order-status-rejected: #9CA3AF;
+    --order-pagination-active: #1c1c1c;
+    --order-pagination-active-text: #ffffff;
+    --order-row-hover: rgba(0, 0, 0, 0.02);
   }
 
   .dark {
@@ -84,6 +92,14 @@
     --sales-affiliate: #4ADE80;
     --sales-sponsored: #60A5FA;
     --sales-email: #C084FC;
+    --order-status-in-progress: #60A5FA;
+    --order-status-complete: #4ADE80;
+    --order-status-pending: #A78BFA;
+    --order-status-approved: #FBBF24;
+    --order-status-rejected: #9CA3AF;
+    --order-pagination-active: #494949;
+    --order-pagination-active-text: #ffffff;
+    --order-row-hover: rgba(255, 255, 255, 0.05);
   }
 
   .sidebar-icon,
@@ -102,6 +118,10 @@
 
   .dark .header-icon-button:hover {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  button:hover:not(:disabled) {
+    opacity: 0.8;
   }
 
   button:active {

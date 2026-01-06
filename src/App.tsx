@@ -1,4 +1,4 @@
-import { AppProvider } from "./contexts/AppContext";
+import { AppProvider, useAppContext } from "./contexts/AppContext";
 import LeftSidebar from "./components/LeftSidebar";
 import RightSidebar from "./components/RightSidebar";
 import Header from "./components/Header";
@@ -9,71 +9,80 @@ import Revenue from "./components/CenterContent/Revenue/Revenue";
 import RevenueByLocation from "./components/CenterContent/RevenueByLocation/RevenueByLocation";
 import TotalSales from "./components/CenterContent/TotalSales/TotalSales";
 import TopSellingProducts from "./components/CenterContent/TopSellingProducts/TopSellingProducts";
+import OrderList from "./components/CenterContent/OrderList/OrderList";
 
 function MainContent() {
+  const { currentView } = useAppContext();
+
   return (
     <main className="main-content" style={commonStyles.container}>
       <Header />
-      <div style={commonStyles.mainContentContainer}>
-        <span style={commonStyles.sectionTitle}>eCommerce</span>
-        <div style={mainContentGridStyles.container}>
-          <div
-            style={{
-              ...mainContentGridStyles.baseItem,
-              ...mainContentGridStyles.half,
-            }}
-          >
-            <Trends />
-          </div>
-          <div
-            style={{
-              ...mainContentGridStyles.baseItem,
-              ...mainContentGridStyles.half,
-              backgroundColor: "var(--section-background)",
-            }}
-          >
-            <Projections />
-          </div>
+      {currentView === "orders" ? (
+        <div style={commonStyles.mainContentContainer}>
+          <OrderList />
+        </div>
+      ) : (
+        <div style={commonStyles.mainContentContainer}>
+          <span style={commonStyles.sectionTitle}>eCommerce</span>
+          <div style={mainContentGridStyles.container}>
+            <div
+              style={{
+                ...mainContentGridStyles.baseItem,
+                ...mainContentGridStyles.half,
+              }}
+            >
+              <Trends />
+            </div>
+            <div
+              style={{
+                ...mainContentGridStyles.baseItem,
+                ...mainContentGridStyles.half,
+                backgroundColor: "var(--section-background)",
+              }}
+            >
+              <Projections />
+            </div>
 
-          <div
-            style={{
-              ...mainContentGridStyles.baseItem,
-              ...mainContentGridStyles.threeQuarters,
-              backgroundColor: "var(--section-background)",
-            }}
-          >
-            <Revenue />
-          </div>
-          <div
-            style={{
-              ...mainContentGridStyles.baseItem,
-              ...mainContentGridStyles.oneQuarter,
-              backgroundColor: "var(--section-background)",
-            }}
-          >
-            <RevenueByLocation />
-          </div>
+            <div
+              style={{
+                ...mainContentGridStyles.baseItem,
+                ...mainContentGridStyles.threeQuarters,
+                backgroundColor: "var(--section-background)",
+              }}
+            >
+              <Revenue />
+            </div>
+            <div
+              style={{
+                ...mainContentGridStyles.baseItem,
+                ...mainContentGridStyles.oneQuarter,
+                backgroundColor: "var(--section-background)",
+              }}
+            >
+              <RevenueByLocation />
+            </div>
 
-          <div
-            style={{
-              ...mainContentGridStyles.baseItem,
-              ...mainContentGridStyles.threeQuarters,
-              backgroundColor: "var(--section-background)",
-            }}
-          >
-            <TopSellingProducts />
-          </div>
-          <div
-            style={{
-              ...mainContentGridStyles.baseItem,
-              ...mainContentGridStyles.oneQuarter,
-              backgroundColor: "var(--section-background)",
-            }}
-          >
-            <TotalSales />
+            <div
+              style={{
+                ...mainContentGridStyles.baseItem,
+                ...mainContentGridStyles.threeQuarters,
+                backgroundColor: "var(--section-background)",
+              }}
+            >
+              <TopSellingProducts />
+            </div>
+            <div
+              style={{
+                ...mainContentGridStyles.baseItem,
+                ...mainContentGridStyles.oneQuarter,
+                backgroundColor: "var(--section-background)",
+              }}
+            >
+              <TotalSales />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </main>
   );
 }

@@ -19,6 +19,8 @@ interface SidebarState {
 
 type ThemeValue = (typeof THEME)[keyof typeof THEME];
 
+type ViewType = "dashboard" | "orders";
+
 interface AppContextType {
   leftCollapsed: boolean;
   rightCollapsed: boolean;
@@ -27,6 +29,9 @@ interface AppContextType {
 
   theme: ThemeValue;
   toggleTheme: () => void;
+
+  currentView: ViewType;
+  setCurrentView: (view: ViewType) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -80,6 +85,8 @@ export function AppProvider({ children }: AppProviderProps) {
     const stored = loadSidebarStateFromStorage();
     return stored.rightCollapsed;
   });
+
+  const [currentView, setCurrentView] = useState<ViewType>("dashboard");
 
   const [theme, setTheme] = useState<ThemeValue>(() => {
     const isManual = localStorage.getItem(THEME_MANUAL_OVERRIDE_KEY) === "true";
@@ -154,6 +161,8 @@ export function AppProvider({ children }: AppProviderProps) {
     toggleRight,
     theme,
     toggleTheme,
+    currentView,
+    setCurrentView,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

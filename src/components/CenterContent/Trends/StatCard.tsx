@@ -4,7 +4,7 @@ import { statCardStyles, trendsStyles } from "./styles";
 
 //@ts-ignore
 const StatCard = ({ item }) => {
-  const { theme } = useAppContext();
+  const { theme, setCurrentView } = useAppContext();
   const cardTheme =
     item.colors[theme === THEME.DARK ? THEME.DARK : THEME.LIGHT];
 
@@ -12,10 +12,17 @@ const StatCard = ({ item }) => {
   const cardStyle = {
     ...trendsStyles.cardBase,
     backgroundColor: cardTheme.background,
+    cursor: item.id === "orders" ? "pointer" : "default",
+  };
+
+  const handleClick = () => {
+    if (item.id === "orders") {
+      setCurrentView("orders");
+    }
   };
 
   return (
-    <div style={cardStyle}>
+    <div style={cardStyle} onClick={handleClick}>
       <div style={{ ...statCardStyles.title, color: cardTheme.text }}>
         {item.title}
       </div>
