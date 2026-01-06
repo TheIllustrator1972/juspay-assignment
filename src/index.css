@@ -37,6 +37,11 @@
     --chart-line-current: #60A5FA;
     --chart-line-previous: #A78BFA;
     --section-background: #F7F9FB;
+    --map-pin-color: #A78BFA;
+    --map-pin-glow: rgba(167, 139, 250, 0.4);
+    --progress-bar-color: #60A5FA;
+    --map-background: #E8E8E8;
+    --map-country-fill: #D2DFEA;
   }
 
   .dark {
@@ -66,6 +71,11 @@
     --chart-line-current: #60A5FA;
     --chart-line-previous: #A78BFA;
     --section-background: #282828;
+    --map-pin-color: #A78BFA;
+    --map-pin-glow: rgba(167, 139, 250, 0.4);
+    --progress-bar-color: #60A5FA;
+    --map-background: #3D3D3D;
+    --map-country-fill: #6B7680;
   }
 
   .sidebar-icon,

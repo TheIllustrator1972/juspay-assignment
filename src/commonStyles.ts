@@ -8,6 +8,7 @@ export const commonStyles = {
     backgroundColor: "var(--primary)",
     borderLeft: `1px solid var(--main-content-border)`,
     borderRight: `1px solid var(--main-content-border)`,
+    overflow: "scroll",
   },
   leftSidebar: {
     height: "100vh",
@@ -67,6 +68,7 @@ export const mainContentGridStyles = {
     borderRadius: "16px",
     fontSize: "1.2rem",
     fontWeight: "bold",
+    minHeight: "318px",
   },
   half: {
     gridColumn: "span 2",
