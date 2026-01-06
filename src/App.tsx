@@ -8,6 +8,7 @@ import Projections from "./components/CenterContent/Projections/Projections";
 import Revenue from "./components/CenterContent/Revenue/Revenue";
 import RevenueByLocation from "./components/CenterContent/RevenueByLocation/RevenueByLocation";
 import TotalSales from "./components/CenterContent/TotalSales/TotalSales";
+import TopSellingProducts from "./components/CenterContent/TopSellingProducts/TopSellingProducts";
 
 function MainContent() {
   return (
@@ -57,9 +58,10 @@ function MainContent() {
             style={{
               ...mainContentGridStyles.baseItem,
               ...mainContentGridStyles.threeQuarters,
+              backgroundColor: "var(--section-background)",
             }}
           >
-            75%
+            <TopSellingProducts />
           </div>
           <div
             style={{

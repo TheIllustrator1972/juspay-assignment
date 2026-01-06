@@ -54,7 +54,6 @@ const TotalSales = () => {
             },
           },
         },
-        borderRadius: 8,
       },
     },
     legend: {
