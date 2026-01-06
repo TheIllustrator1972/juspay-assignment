@@ -10,7 +10,7 @@ function LeftSidebar() {
   const { leftCollapsed } = useAppContext();
   const [activeItemId, setActiveItemId] = useState<string | null>("default");
 
-  const handleItemClick = (itemId: string, parentId?: string) => {
+  const handleItemClick = (itemId: string, _parentId?: string) => {
     // itemId already contains the composite ID for child items
     // or the direct ID for parent items
     setActiveItemId(itemId);

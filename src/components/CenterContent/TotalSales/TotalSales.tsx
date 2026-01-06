@@ -4,7 +4,7 @@ import { useAppContext } from "../../../contexts/AppContext";
 import { totalSalesStyles } from "./styles";
 
 const TotalSales = () => {
-  const { theme } = useAppContext();
+  const { theme, leftCollapsed, rightCollapsed } = useAppContext();
 
   const salesData = [
     { name: "Direct", value: 300.56 },
@@ -75,7 +75,7 @@ const TotalSales = () => {
       <div style={totalSalesStyles.chartContainer}>
         <div style={totalSalesStyles.chartWrapper}>
           <Chart
-            key={theme}
+            key={`${theme}-${leftCollapsed}-${rightCollapsed}`}
             options={chartOptions}
             series={chartSeries}
             type="donut"

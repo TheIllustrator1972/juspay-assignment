@@ -4,18 +4,7 @@ import { useAppContext } from "../../../contexts/AppContext";
 import { commonStyles } from "../../../commonStyles";
 
 const Revenue = () => {
-  const { theme } = useAppContext();
-
-  const getCSSVariable = (variableName: string): string => {
-    return getComputedStyle(document.documentElement)
-      .getPropertyValue(variableName)
-      .trim();
-  };
-
-  const axisLabelColor = getCSSVariable("--chart-axis-label");
-  const currentPeriodColor = getCSSVariable("--chart-line-current");
-  const previousPeriodColor = getCSSVariable("--chart-line-previous");
-  const gridLineColor = getCSSVariable("--chart-grid-line");
+  const { theme, leftCollapsed, rightCollapsed } = useAppContext();
 
   // Month-wise data points based on image analysis:
   // Current Period: starts ~8M (Jan), peaks ~18M (Mar), drops to ~10M (Apr), rises to ~24M (Jun)
@@ -44,7 +33,7 @@ const Revenue = () => {
       categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
       labels: {
         style: {
-          colors: axisLabelColor,
+          colors: "var(--chart-axis-label)",
         },
         offsetX: 0,
       },
@@ -61,7 +50,7 @@ const Revenue = () => {
           return `${value}M`;
         },
         style: {
-          colors: axisLabelColor,
+          colors: "var(--chart-axis-label)",
         },
       },
       tickAmount: 3,
@@ -70,7 +59,7 @@ const Revenue = () => {
       forceNiceScale: false,
     },
     grid: {
-      borderColor: gridLineColor,
+      borderColor: "var(--chart-grid-line)",
       strokeDashArray: 0,
       xaxis: {
         lines: {
@@ -83,7 +72,7 @@ const Revenue = () => {
         },
       },
     },
-    colors: [currentPeriodColor, previousPeriodColor, previousPeriodColor],
+    colors: ["var(--chart-line-current)", "var(--chart-line-previous)", "var(--chart-line-previous)"],
     legend: {
       show: false,
     },
@@ -121,7 +110,7 @@ const Revenue = () => {
             width: '8px',
             height: '8px',
             borderRadius: '50%',
-            backgroundColor: currentPeriodColor
+            backgroundColor: 'var(--chart-line-current)'
           }} />
           <span style={{ 
             color: 'var(--section-title)',
@@ -140,7 +129,7 @@ const Revenue = () => {
             width: '8px',
             height: '8px',
             borderRadius: '50%',
-            backgroundColor: previousPeriodColor
+            backgroundColor: 'var(--chart-line-previous)'
           }} />
           <span style={{ 
             color: 'var(--section-title)',
@@ -157,7 +146,7 @@ const Revenue = () => {
       </div>
       <div style={{ width: "100%", height: "100%", paddingLeft: "8px" }}>
         <Chart
-          key={theme}
+          key={`${theme}-${leftCollapsed}-${rightCollapsed}`}
           options={chartOptions}
           series={chartSeries}
           type="line"

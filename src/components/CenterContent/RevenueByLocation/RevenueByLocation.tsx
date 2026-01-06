@@ -4,7 +4,6 @@ import {
   Geography,
   Marker,
 } from "react-simple-maps";
-import { useAppContext } from "../../../contexts/AppContext";
 import { commonStyles } from "../../../commonStyles";
 import { revenueByLocationStyles } from "./styles";
 
@@ -24,8 +23,6 @@ const locations: LocationData[] = [
 ];
 
 const RevenueByLocation = () => {
-  const { theme } = useAppContext();
-
   // Find max revenue for progress bar calculation
   const maxRevenue = Math.max(...locations.map((loc) => loc.revenue));
 
